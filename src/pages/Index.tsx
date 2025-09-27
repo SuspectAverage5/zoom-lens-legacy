@@ -95,29 +95,11 @@ const Index = () => {
             </div>
             
             <div className="scientific-card max-w-4xl mx-auto">
-              <div className="image-placeholder">
-                <div className="text-center space-y-4">
-                  <div className="w-20 h-20 mx-auto bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center animate-float">
-                    <svg
-                      width="40"
-                      height="40"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="text-primary"
-                    >
-                      <path d="M12 1L8 5v6H6v2h2v6l4 4 4-4v-6h2V11h-2V5l-4-4zM10 7h4v2h-4V7zm0 4h4v2h-4v-2zm0 4h4v2h-4v-2z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground">
-                      Hero Image: Microscope Evolution
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Timeline visualization or iconic microscope image
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <img 
+                src="/vibrant-cells.jpg" 
+                alt="Vibrant microscopic cells showing the beauty of microscopic life"
+                className="w-full h-64 object-cover rounded-lg"
+              />
             </div>
 
             <div className="pt-8">
