@@ -177,8 +177,10 @@
     @apply text-4xl md:text-6xl font-bold text-foreground leading-tight;
     background: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--primary)));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* -webkit-text-fill-color: transparent; */
     background-clip: text;
+    border-radius: 15px;
+    padding: 15px;
   }
 
   .scientific-subtitle {

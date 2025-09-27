@@ -76,9 +76,9 @@ const Index = () => {
           >
             <div className="space-y-4">
               <h1 className="scientific-headline">
-                The Evolution of
+                L'Évolution du
                 <br />
-                <span className="text-primary">Microscopy</span>
+                <span className="text-primary">Microscope</span>
               </h1>
               <p className="scientific-subtitle max-w-3xl mx-auto">
                 Journey through four centuries of scientific innovation, from the first compound microscopes 
