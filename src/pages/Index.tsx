@@ -33,6 +33,7 @@ const Index = () => {
       achievements: ["Améliore la clarté des lentilles", "Grossissements jusqu'à 20x", "Documentation scientifique des observations microscopiques", "Rapprochement des technologies de l'astronomie et de la microscopie"],
       imageAlt: "Galileo's microscope design and optical innovations",
       reversed: true,
+      imgsrc: "galilee-microscope.jpg"
     },
     {
       title: "Antonie van Leeuwenhoek",
@@ -46,6 +47,7 @@ const Index = () => {
       // ],
       achievements: ["En 1668, il présente un microscope 10 fois plus puissant que celui de Galilée.", "Son microscope utilise une seule lentille de forte résolution.", "Permet d’observer des structures invisibles à l’œil nu (Comme des cellules vivantes).", "Il est le premier à déssiner des cellules (sans les avoir nommées)", "Il est considéré comme l'inventeur du microscope"],
       imageAlt: "Leeuwenhoek's precision single-lens microscope",
+      imgsrc: "marc-img.jpg"
     },
     {
       title: "Microscopie Moderne",
@@ -88,8 +90,7 @@ const Index = () => {
                 <span className="text-primary">Microscope</span>
               </h1>
               <p className="scientific-subtitle max-w-3xl mx-auto">
-                Journey through four centuries of scientific innovation, from the first compound microscopes 
-                to today's atomic-resolution instruments that reveal the fundamental building blocks of life.
+                Voyagez à travers quatre siècles d'innovation scientifique, des premiers microscopes composés aux instruments à résolution atomique d'aujourd'hui qui révèlent les éléments fondamentaux de la vie.
               </p>
             </div>
             
