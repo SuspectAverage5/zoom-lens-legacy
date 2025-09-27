@@ -63,33 +63,42 @@ export const MicroscopeSection = ({
             </div>
           </div>
 
-          {/* Image Placeholder */}
+          {/* Image */}
           <div className={cn("", { "md:order-1": reversed })}>
             <div className="scientific-card">
-              <div className="image-placeholder group">
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center group-hover:animate-magnify">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="text-primary"
-                    >
-                      <path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 1 0 13 15.5l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
-                    </svg>
-                  </div>
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-foreground">
-                      {imageAlt}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Custom image placeholder
-                      <img src="{imgsrc}"/>
-                    </p>
+              {imgsrc ? (
+                <div className="overflow-hidden rounded-lg">
+                  <img 
+                    src={`/${imgsrc}`}
+                    alt={imageAlt}
+                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              ) : (
+                <div className="image-placeholder group">
+                  <div className="text-center space-y-4">
+                    <div className="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center group-hover:animate-magnify">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="text-primary"
+                      >
+                        <path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 1 0 13 15.5l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                      </svg>
+                    </div>
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-foreground">
+                        {imageAlt}
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Custom image placeholder
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
