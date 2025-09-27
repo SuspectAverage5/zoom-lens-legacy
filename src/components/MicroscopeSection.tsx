@@ -8,6 +8,7 @@ interface MicroscopeSectionProps {
   achievements: string[];
   imageAlt: string;
   reversed?: boolean;
+  imgsrc: string;
 }
 
 export const MicroscopeSection = ({
@@ -17,6 +18,7 @@ export const MicroscopeSection = ({
   achievements,
   imageAlt,
   reversed = false,
+  imgsrc
 }: MicroscopeSectionProps) => {
   const { ref, isInView } = useScrollAnimation(0.2);
 
@@ -45,7 +47,7 @@ export const MicroscopeSection = ({
             
             <div className="space-y-3">
               <h3 className="text-xl font-semibold text-foreground">
-                Key Contributions:
+                Contributions:
               </h3>
               <ul className="space-y-2">
                 {achievements.map((achievement, index) => (
@@ -83,6 +85,7 @@ export const MicroscopeSection = ({
                     </h4>
                     <p className="text-sm text-muted-foreground">
                       Custom image placeholder
+                      <img src="{imgsrc}"/>
                     </p>
                   </div>
                 </div>

@@ -1,5 +1,6 @@
 import { useScrollAnimation, useParallax } from "@/hooks/useScrollAnimation";
 import { MicroscopeSection } from "@/components/MicroscopeSection";
+import { Description } from "@radix-ui/react-toast";
 
 const Index = () => {
   const { ref: heroRef, isInView: heroInView } = useScrollAnimation(0.3);
@@ -8,7 +9,7 @@ const Index = () => {
   const microscopeData = [
     {
       title: "Hans & Zacharias Jansen",
-      period: "1590s",
+      period: "1590",
       description: "Dutch spectacle makers who are credited with inventing the compound microscope. Their revolutionary design used multiple lenses to achieve greater magnification than single-lens systems.",
       achievements: [
         "Created the first compound microscope with 3x-9x magnification",
@@ -21,40 +22,46 @@ const Index = () => {
     {
       title: "Galileo Galilei",
       period: "1609-1610",
-      description: "The renowned astronomer adapted telescope technology to create an improved compound microscope, calling it 'occhiolino' (little eye). His modifications significantly enhanced image clarity.",
-      achievements: [
-        "Improved lens grinding techniques for better clarity",
-        "Achieved magnifications up to 20x",
-        "Documented microscopic observations scientifically",
-        "Bridged astronomy and microscopy technologies"
-      ],
+      // description: "The renowned astronomer adapted telescope technology to create an improved compound microscope, calling it 'occhiolino' (little eye). His modifications significantly enhanced image clarity.",
+      description: "Astronome célébre qui utilise la technologie des télescopes pour créer un microscope qu'il nomme « occhiolino » (clin d'œil)",
+      // achievements: [
+      //   "Improved lens grinding techniques for better clarity",
+      //   "Achieved magnifications up to 20x",
+      //   "Documented microscopic observations scientifically",
+      //   "Bridged astronomy and microscopy technologies"
+      // ],
+      achievements: ["Améliore la clarté des lentilles", "Grossissements jusqu'à 20x", "Documentation scientifique des observations microscopiques", "Rapprochement des technologies de l'astronomie et de la microscopie"],
       imageAlt: "Galileo's microscope design and optical innovations",
       reversed: true,
     },
     {
       title: "Antonie van Leeuwenhoek",
-      period: "1670s-1720s",
-      description: "Dutch scientist who perfected single-lens microscopes and became the first person to observe and describe bacteria, protozoa, and other microorganisms, earning him the title 'Father of Microbiology'.",
-      achievements: [
-        "Achieved unprecedented 275x magnification",
-        "First to observe bacteria and microorganisms",
-        "Created over 500 microscopes in his lifetime",
-        "Established microscopy as a scientific discipline"
-      ],
+      period: "1670-1720",
+      description: "Commerçant et scientifique néerlandais né en 1632. Curieux et passionné, il devient célèbre pour ses observations au microscope, qu’il fabrique lui-même.",
+      // achievements: [
+      //   "Achieved unprecedented 275x magnification",
+      //   "First to observe bacteria and microorganisms",
+      //   "Created over 500 microscopes in his lifetime",
+      //   "Established microscopy as a scientific discipline"
+      // ],
+      achievements: ["En 1668, il présente un microscope 10 fois plus puissant que celui de Galilée.", "Son microscope utilise une seule lentille de forte résolution.", "Permet d’observer des structures invisibles à l’œil nu (Comme des cellules vivantes).", "Il est le premier à déssiner des cellules (sans les avoir nommées)", "Il est considéré comme l'inventeur du microscope"],
       imageAlt: "Leeuwenhoek's precision single-lens microscope",
     },
     {
-      title: "Modern Microscopy",
-      period: "1900s-Present",
-      description: "From electron microscopes to atomic force microscopy, modern instruments have revealed the smallest details of matter, enabling breakthroughs in medicine, materials science, and nanotechnology.",
-      achievements: [
-        "Electron microscopy: magnification up to 2,000,000x",
-        "Atomic force microscopy: individual atom resolution",
-        "Fluorescence microscopy: live cell imaging",
-        "Digital integration and AI-enhanced imaging"
-      ],
+      title: "Microscopie Moderne",
+      period: "1900-Présent",
+      // description: "From electron microscopes to atomic force microscopy, modern instruments have revealed the smallest details of matter, enabling breakthroughs in medicine, materials science, and nanotechnology.",
+      description: "Même principe que celui de Jansen (superposer deux lentilles) mais de façon plus développée (lentilles de meilleure qualité…)",
+      // achievements: [
+      //   "Electron microscopy: magnification up to 2,000,000x",
+      //   "Atomic force microscopy: individual atom resolution",
+      //   "Fluorescence microscopy: live cell imaging",
+      //   "Digital integration and AI-enhanced imaging"
+      // ],
+      achievements: ["Grossissement x1000", "Permettre de voir des cellules ou bactéries", "Voir facilement des détails invisibles à l'œuil nu"],
       imageAlt: "Modern electron microscope and digital imaging",
       reversed: true,
+      imgsrc: "modern-microscope.jpg"
     },
   ];
 
@@ -147,6 +154,7 @@ const Index = () => {
           achievements={section.achievements}
           imageAlt={section.imageAlt}
           reversed={section.reversed}
+          imgsrc={section.imgsrc}
         />
       ))}
 
