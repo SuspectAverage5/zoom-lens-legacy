@@ -8,15 +8,17 @@ const Index = () => {
 
   const microscopeData = [
     {
-      title: "Hans & Zacharias Jansen",
-      period: "1590",
-      description: "Dutch spectacle makers who are credited with inventing the compound microscope. Their revolutionary design used multiple lenses to achieve greater magnification than single-lens systems.",
-      achievements: [
-        "Created the first compound microscope with 3x-9x magnification",
-        "Pioneered multi-lens optical systems",
-        "Established the foundation for modern microscopy",
-        "Inspired a generation of optical instrument makers"
-      ],
+      title: "Zacharias Jansen",
+      period: "1585–1632",
+      // description: "Dutch spectacle makers who are credited with inventing the compound microscope. Their revolutionary design used multiple lenses to achieve greater magnification than single-lens systems.",
+      description: "Opticien Hollandais qui aurait eu l’idée de superposer deux lentilles convergentes dans des tubes coulissants entre 1590 et 1595.",
+      // achievements: [
+      //   "Created the first compound microscope with 3x-9x magnification",
+      //   "Pioneered multi-lens optical systems",
+      //   "Established the foundation for modern microscopy",
+      //   "Inspired a generation of optical instrument makers"
+      // ],
+      achievements: ["Ce système grossissait environ 10x", "C’est considéré comme le premier microscope optique", "C’est le point de départ d’une longue histoire scientifique", "Sans son idée, on n’aurait pas découvert la cellule ni développé toute la biologie moderne"],
       imageAlt: "Early Jansen compound microscope replica",
     },
     {
@@ -30,7 +32,7 @@ const Index = () => {
       //   "Documented microscopic observations scientifically",
       //   "Bridged astronomy and microscopy technologies"
       // ],
-      achievements: ["Améliore la clarté des lentilles", "Grossissements jusqu'à 20x", "Documentation scientifique des observations microscopiques", "Rapprochement des technologies de l'astronomie et de la microscopie"],
+      achievements: ["Améliore la clarté des lentilles", "Grossissements jusqu'à 30x", "Documentation scientifique des observations microscopiques", "Rapprochement des technologies de l'astronomie et de la microscopie"],
       imageAlt: "Galileo's microscope design and optical innovations",
       reversed: true,
       imgsrc: "galilee-microscope.jpg"
@@ -97,7 +99,7 @@ const Index = () => {
             <div className="scientific-card max-w-4xl mx-auto">
               <img 
                 src="/vibrant-cells.jpg" 
-                alt="Vibrant microscopic cells showing the beauty of microscopic life"
+                alt="Cellules microscopiques"
                 className="w-full h-64 object-cover rounded-lg"
               />
             </div>
@@ -146,15 +148,16 @@ const Index = () => {
         <div className="container mx-auto px-6 text-center">
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-foreground">
-              Continue Your Scientific Journey
+              Pour continuer notre voyage Scientifique
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              The story of microscopy continues to evolve with new technologies and discoveries. 
-              Each innovation builds upon centuries of scientific curiosity and innovation.
+              {/* The story of microscopy continues to evolve with new technologies and discoveries. 
+              Each innovation builds upon centuries of scientific curiosity and innovation. */}
+              Nous allons faire un petit jeu
             </p>
             <div className="pt-4">
               <button className="scientific-btn">
-                Learn More About Modern Microscopy
+                Merci Andrew
               </button>
             </div>
           </div>
