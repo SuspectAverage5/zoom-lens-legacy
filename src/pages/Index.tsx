@@ -1,10 +1,12 @@
 import { useScrollAnimation, useParallax } from "@/hooks/useScrollAnimation";
 import { MicroscopeSection } from "@/components/MicroscopeSection";
 import { Description } from "@radix-ui/react-toast";
+import { useState } from "react";
 
 const Index = () => {
   const { ref: heroRef, isInView: heroInView } = useScrollAnimation(0.3);
   const parallaxOffset = useParallax();
+  const [showDefinitions, setShowDefinitions] = useState(false);
 
   const microscopeData = [
     {
@@ -151,14 +153,57 @@ const Index = () => {
               Pour continuer notre voyage Scientifique
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              {/* The story of microscopy continues to evolve with new technologies and discoveries. 
-              Each innovation builds upon centuries of scientific curiosity and innovation. */}
               Nous allons faire un petit jeu
             </p>
             <div className="pt-4">
-              <button className="scientific-btn">
-                Merci Andrew
+              <button 
+                className="scientific-btn"
+                onClick={() => setShowDefinitions(!showDefinitions)}
+              >
+                {showDefinitions ? "Masquer les définitions" : "Révéler les définitions"}
               </button>
+            </div>
+            
+            <div 
+              className={`transition-all duration-700 ease-in-out overflow-hidden ${
+                showDefinitions ? 'max-h-[1000px] opacity-100 mt-8' : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="scientific-card max-w-4xl mx-auto text-left">
+                <h4 className="text-xl font-bold text-foreground mb-6">Définitions</h4>
+                <ol className="space-y-3 text-muted-foreground">
+                  <li className="hover:text-foreground transition-colors">
+                    <span className="font-semibold text-primary">1.</span> Terme désignant l'agrandissement visuel d'un objet.
+                  </li>
+                  <li className="hover:text-foreground transition-colors">
+                    <span className="font-semibold text-primary">2.</span> Nom du microscope utilisé avant l'électronique.
+                  </li>
+                  <li className="hover:text-foreground transition-colors">
+                    <span className="font-semibold text-primary">3.</span> Ancien mot italien pour désigner le microscope de Galilée.
+                  </li>
+                  <li className="hover:text-foreground transition-colors">
+                    <span className="font-semibold text-primary">4.</span> Instrument optique permettant de voir de très petits objets.
+                  </li>
+                  <li className="hover:text-foreground transition-colors">
+                    <span className="font-semibold text-primary">5.</span> Personne qui a peut-être inventé le premier microscope vers 1590.
+                  </li>
+                  <li className="hover:text-foreground transition-colors">
+                    <span className="font-semibold text-primary">6.</span> Pièce de verre courbé qui fait converger ou diverger la lumière.
+                  </li>
+                  <li className="hover:text-foreground transition-colors">
+                    <span className="font-semibold text-primary">7.</span> Nom général donné aux lentilles qui rapprochent l'image.
+                  </li>
+                  <li className="hover:text-foreground transition-colors">
+                    <span className="font-semibold text-primary">8.</span> Surface plate en verre sur laquelle on place l'objet à observer.
+                  </li>
+                  <li className="hover:text-foreground transition-colors">
+                    <span className="font-semibold text-primary">9.</span> Unité de mesure utilisée pour des objets très petits (symbole µm).
+                  </li>
+                  <li className="hover:text-foreground transition-colors">
+                    <span className="font-semibold text-primary">10.</span> Matière que l'on met sur une lame pour l'observer au microscope.
+                  </li>
+                </ol>
+              </div>
             </div>
           </div>
         </div>
