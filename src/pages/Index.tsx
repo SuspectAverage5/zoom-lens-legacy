@@ -22,6 +22,7 @@ const Index = () => {
       // ],
       achievements: ["Ce système grossissait environ 10x", "C’est considéré comme le premier microscope optique", "C’est le point de départ d’une longue histoire scientifique", "Sans son idée, on n’aurait pas découvert la cellule ni développé toute la biologie moderne"],
       imageAlt: "Early Jansen compound microscope replica",
+      imgsrc: "zach-micro.jpg"
     },
     {
       title: "Galileo Galilei",
