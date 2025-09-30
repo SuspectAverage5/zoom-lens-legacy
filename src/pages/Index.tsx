@@ -160,7 +160,7 @@ const Index = () => {
                 className="scientific-btn"
                 onClick={() => setShowDefinitions(!showDefinitions)}
               >
-                {showDefinitions ? "Révéler les définitions" : "Révéler les définitions"}
+                {showDefinitions ? "Masquer les définitions" : "Révéler les définitions"}
               </button>
             </div>
             
